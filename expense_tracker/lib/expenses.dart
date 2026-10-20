@@ -9,7 +9,6 @@ import 'package:expense_tracker/widgets/theme_toggle_button.dart';
 class Expenses extends StatefulWidget {
   const Expenses({super.key, this.onToggleTheme});
 
-  /// Called with `true` when the app is currently dark.
   final void Function(bool isDark)? onToggleTheme;
 
   @override
@@ -44,7 +43,7 @@ class _ExpensesState extends State<Expenses> {
       isScrollControlled: true,
       useSafeArea: true,
       showDragHandle: true,
-      // On tablets and landscape the sheet stays a comfortable width.
+
       constraints: const BoxConstraints(maxWidth: LayoutConstants.maxSheetWidth),
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
     );
